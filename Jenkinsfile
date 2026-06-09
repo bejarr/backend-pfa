@@ -38,5 +38,10 @@ stage('Quality Gate') {
         }
     }
 }
+stage('Security Check') {
+    steps {
+        error('SQL Injection detected - Pipeline blocked')
+    }
+}
     }
 }
